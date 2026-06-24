@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  text-transform: uppercase;
+  scroll-behavior: smooth;
+}
+
+.web_container {
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  scroll-snap-type: y mandatory;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.LandPage_video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+
+  top: 0;
+  opacity: 0.4;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  height: 5rem;
+  color: #fff;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* padding: 35px 90px; */
+  top: 0;
+  z-index: 1;
+}
+
+nav h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+
+  /* Adds a premium gradient to the navbar logo */
+  background: linear-gradient(to right, #ffffff, #00d2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+nav h2,
+nav ul {
+  margin: 35px 60px;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  text-decoration: none;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.8s;
+}
+
+nav ul li a:hover {
+  color: #00d2ff;
+  transition: all 0.3 ease 0s;
+}
+
+.Contact-bnt a {
+  background-color: transparent;
+  padding: 8px 16px;
+  border: 1.5px solid #00d2ff;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.1);
+}
+
+.Contact-bnt a:hover {
+  background-color: #00d2ff;
+  color: #000;
+  border: 1.5px solid #00d2ff;
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content h1 {
+  font-family:
+    "Google Sans", "Open Sans", "Playwrite GB S Guides", "Poppins", "Roboto",
+    sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 6px;
+  background: linear-gradient(to bottom, #ffffff 40%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.9));
+
+  opacity: 0;
+
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 4.6s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.content p {
+  font-size: min(0.6rem, 2vw);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.95),
+    0 1px 3px rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 5s;
+}
+
+.ingred-container {
+  height: 100vh;
+  width: 100%;
+  padding: 5rem 0;
+}
+
+.ingred-cards {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 60px;
+  gap: 30px;
+  color: #fff;
+}
+
+.ingred-img .img {
+  width: 450px;
+  height: 450px;
+  background-image: url("src/assets/imgs/bf2afa6e-ab0f-417f-b75f-2419a6be6971.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.181);
+  box-shadow:
+    0 -2px 8px rgba(0, 183, 255, 0.4),
+    0 2px 8px rgba(0, 183, 255, 0.4);
+}
+
+.ingredients {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.ingredients p {
+  text-transform: none;
+  font-size: min(16px, 2vw);
+  opacity: 0.8;
+}
+
+.ingredients h2 {
+  font-size: min(2.4rem, 6vw);
+  padding-bottom: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  /* 1. Define the gradient canvas first */
+  background: linear-gradient(
+    to bottom,
+    #00c974 0%,
+    /* Top: Emerald Green */ #e1ff00 50%,
+    /* Middle: Bright Chartreuse */ #ff6a00 100% /* Base: Neon Orange */
+  );
+
+  /* 2. Layer the clipping rules directly beneath the background definition */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.8));
+}
+
+/*              Contact Section              */
+.contact-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 210, 255, 0.08) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 550px;
+  padding: 0 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+.contact-title {
+  font-size: min(3rem, 8vw);
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  background: linear-gradient(to bottom, #ffffff 30%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-subtitle {
+  color: #bdf5ff;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  text-transform: none;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  outline: 0;
+  transition: all 0.4s ease;
+  text-transform: none;
+}
+
+.form-group {
+  gap: 20px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00d2ff;
+  background: rgba(0, 210, 255, 0.02);
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.15);
+}
+
+.submit-btn {
+  background-color: transparent;
+  padding: 16px;
+  border: 1.5px solid #00d2ff;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.1);
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #00d2ff;
+  color: #000;
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.5);
+}
+
+/* FOOTER */
+
+.mini_footer {
+  position: absolute;
+  bottom: 30px;
+  opacity: 0.3;
+  letter-spacing: 1px;
+}
+
+.mini_footer p {
+  color: #fff;
+  font-size: 0.7rem;
+}

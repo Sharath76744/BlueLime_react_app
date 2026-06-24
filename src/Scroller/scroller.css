@@ -1,0 +1,46 @@
+.ticker_container {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.ticker_wrapper {
+  width: 100%;
+  background-color: #000000;
+  padding: 10px 0;
+  border-top: 3px solid #29b5ed;
+  border-bottom: 3px solid #29b5ed;
+  box-shadow:
+    0 -8px 15px rgba(0, 183, 255, 0.4),
+    0 8px 15px rgba(0, 183, 255, 0.4);
+  display: flex;
+  cursor: pointer;
+}
+
+.ticker_track {
+  display: flex;
+  width: max-content;
+}
+
+.ticker_content {
+  font-family: "Poppins";
+  font-size: clamp(1.2rem, 1.6vw, 1.8rem);
+  font-weight: 900;
+  white-space: nowrap;
+  padding-right: 40px;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(243, 243, 243, 0.689);
+  animation: scrollMarquee 28s linear infinite;
+}
+
+.ticker_wrapper:hover .ticker_content {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translate(0%);
+  }
+  100% {
+    transform: translate(-50%);
+  }
+}
